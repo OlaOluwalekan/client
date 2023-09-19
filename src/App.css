@@ -21,6 +21,12 @@ h1 {
   font-family: 'Permanent Marker', cursive;
   font-size: 3rem;
 }
+input {
+  padding: 10px;
+  font-size: 20px;
+  display: block;
+  margin: 20px auto;
+}
 .box {
   height: 150px;
   width: 100%;
