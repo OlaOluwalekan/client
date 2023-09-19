@@ -4,6 +4,8 @@ import './App.css'
 import Cookies from 'universal-cookie'
 
 const cookies = new Cookies()
+// const baseUrl = 'http://localhost:9000/'
+const baseUrl = 'https://http-cookie.onrender.com/'
 
 const App = () => {
   const createCookies = async () => {
@@ -15,8 +17,17 @@ const App = () => {
 
     try {
       // const resp = await axios.get('http://jsonplaceholder.typicode.com/users/')
-      const resp = await axios.get('http://localhost:9000/')
-      console.log(resp)
+      const resp = await axios.get(baseUrl)
+      console.log(resp.data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  const deleteCookies = async () => {
+    try {
+      const res = await axios.get(`${baseUrl}delete`)
+      console.log(res.data)
     } catch (error) {
       console.log(error)
     }
@@ -30,7 +41,9 @@ const App = () => {
           Create Cookies
         </button>
         <button className='button yellow'>Renew Cookies</button>
-        <button className='button red'>Delete Cookie</button>
+        <button className='button red' onClick={deleteCookies}>
+          Delete Cookie
+        </button>
       </div>
     </div>
   )
