@@ -6,8 +6,8 @@ import { useState } from 'react'
 // import Cookies from 'universal-cookie'
 
 // const cookies = new Cookies()
-const baseUrl = 'http://localhost:9000/'
-// const baseUrl = 'https://http-cookie.onrender.com/'
+// const baseUrl = 'http://localhost:9000/'
+const baseUrl = 'https://http-cookie.onrender.com/'
 
 const App = () => {
   const [cookies] = useCookies(['name'])
