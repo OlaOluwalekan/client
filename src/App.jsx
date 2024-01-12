@@ -13,6 +13,8 @@ const App = () => {
   const [cookies] = useCookies(['name'])
   const [user, setUser] = useState('')
 
+  console.log(cookies)
+
   const getPosts = async () => {
     try {
       const resp = await axios.get(`${baseUrl}post`, {
